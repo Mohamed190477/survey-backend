@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+venv/
+.env
+
+# Build artifacts
+/build/
+/dist/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# IDE/Editor specific
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+
+# User-specific files
+/config/user-specific-file

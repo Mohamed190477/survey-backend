@@ -10,7 +10,7 @@ const organizationSchema = mongoose.Schema({
   branchesLocation: String,
   operationStage: String,
   mainSector: String,
-  employeesNumber: Number,
+  employeesNumber: String,
   insuredEmployees: Number,
   genderBalance: String,
   annualSalesRevenue: Number,

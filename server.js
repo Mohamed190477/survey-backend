@@ -42,57 +42,53 @@ app.get("/api/organization/fetch-organizations", (req, res) => {
       const worksheet = workbook.addWorksheet("Survey Data");
 
       worksheet.columns = [
-        { header: "Name", key: "name", width: 50 },
-        { header: "Social Page", key: "socialPage", width: 50 },
-        { header: "Type", key: "type", width: 50 },
-        { header: "Establishment Year", key: "establishmentYear", width: 50 },
+        { header: "Name", key: "name", width: 40 },
+        { header: "Social Page", key: "socialPage", width: 40 },
+        { header: "Type", key: "type", width: 40 },
+        { header: "Establishment Year", key: "establishmentYear", width: 40 },
         {
           header: "Head Quarter In Egypt",
           key: "headQuarterInEgypt",
-          width: 50,
+          width: 40,
         },
         {
           header: "Head Quarter Location",
           key: "headQuarterLocation",
-          width: 50,
+          width: 40,
         },
-        { header: "Branches Location", key: "branchesLocation", width: 50 },
-        { header: "Operation Stage", key: "operationStage", width: 50 },
-        { header: "Main Sector", key: "mainSector", width: 50 },
-        { header: "Employees Number", key: "employeesNumber", width: 50 },
-        { header: "Insured Employees", key: "insuredEmployees", width: 50 },
-        { header: "Gender Balance", key: "genderBalance", width: 50 },
+        { header: "Branches Location", key: "branchesLocation", width: 40 },
+        { header: "Operation Stage", key: "operationStage", width: 40 },
+        { header: "Main Sector", key: "mainSector", width: 40 },
+        { header: "Employees Number", key: "employeesNumber", width: 40 },
+        { header: "Insured Employees", key: "insuredEmployees", width: 40 },
+        { header: "Gender Balance", key: "genderBalance", width: 40 },
         {
           header: "Annual Sales Revenue",
           key: "annualSalesRevenue",
-          width: 50,
+          width: 40,
         },
-        { header: "Target Growth Rate", key: "targetGrowthRate", width: 50 },
-        { header: "Service Description", key: "serviceDescription", width: 50 },
-        { header: "Contact Name", key: "contactName", width: 50 },
-        { header: "Contact Position", key: "contactPosition", width: 50 },
-        { header: "Contact Email", key: "contactEmail", width: 50 },
-        { header: "Contact Phone", key: "contactPhone", width: 50 },
+        { header: "Target Growth Rate", key: "targetGrowthRate", width: 40 },
+        { header: "Service Description", key: "serviceDescription", width: 40 },
+        { header: "Contact Name", key: "contactName", width: 40 },
+        { header: "Contact Position", key: "contactPosition", width: 40 },
+        { header: "Contact Email", key: "contactEmail", width: 40 },
+        { header: "Contact Phone", key: "contactPhone", width: 40 },
         {
           header: "Organization Legal Structure",
           key: "organizationLegalStructure",
-          width: 50,
+          width: 40,
         },
-        { header: "Received Funding", key: "receivedFunding", width: 50 },
-        { header: "Funding Source", key: "fundingSource", width: 50 },
-        { header: "Funding Seek", key: "fundingSeek", width: 50 },
-        { header: "Three Challenges", key: "threeChallenges", width: 50 },
-        { header: "Any Partnerships", key: "anyPartnerships", width: 50 },
-        { header: "Main Competitors", key: "mainCompetitors", width: 50 },
-        { header: "Customers", key: "customers", width: 50 },
+        { header: "Received Funding", key: "receivedFunding", width: 40 },
+        { header: "Funding Source", key: "fundingSource", width: 40 },
+        { header: "Funding Seek", key: "fundingSeek", width: 40 },
+        { header: "Three Challenges", key: "threeChallenges", width: 40 },
+        { header: "Any Partnerships", key: "anyPartnerships", width: 40 },
+        { header: "Main Competitors", key: "mainCompetitors", width: 40 },
+        { header: "Customers", key: "customers", width: 40 },
       ];
 
       organizationData.forEach((organization) => {
         worksheet.addRow(organization);
-      });
-
-      worksheet.columns.forEach((column) => {
-        column.width = column.header.length < 12 ? 12 : column.header.length;
       });
 
       res.setHeader(

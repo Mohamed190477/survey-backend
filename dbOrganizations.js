@@ -11,7 +11,7 @@ const organizationSchema = mongoose.Schema({
   operationStage: String,
   mainSector: String,
   employeesNumber: Number,
-  insuredEmployees: Number,
+  insuredEmployees: String,
   genderBalance: String,
   annualSalesRevenue: Number,
   targetGrowthRate: Number,

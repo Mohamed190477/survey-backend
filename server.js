@@ -35,6 +35,16 @@ app.post("/api/organization/create-organization", (req, res) => {
     });
 });
 
+app.delete("/api/organization/delete-all", (req, res) => {
+  Organizations.deleteMany({})
+    .then(() => {
+      res.status(200).send("All organizations deleted successfully.");
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+});
+
 app.get("/api/organization/fetch-organizations", (req, res) => {
   Organizations.find({})
     .then(async (organizationData) => {
